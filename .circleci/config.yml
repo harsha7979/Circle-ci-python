@@ -1,9 +1,9 @@
- version: 2.1
+  version: 2.1
 
   jobs:
     build:
       docker:
-        - image: cimg/python
+         - image: cimg/python
       steps:
          - checkout
          - run: python main.py
@@ -11,4 +11,4 @@
   workflows:
     build_now:
       jobs:
-       - build
+        - build
