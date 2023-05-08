@@ -13,3 +13,20 @@ workflows:
   build_now:
     jobs:
       - build
+
+
+test:
+    docker:
+      - image: cimg/python:3.11
+    steps:
+      - checkout
+      - run: python test.py
+
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
