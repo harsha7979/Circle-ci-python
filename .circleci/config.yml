@@ -6,7 +6,7 @@
         - image: cimg/python
       steps:
          - checkout
-         - run: python main
+         - run: python main.py
 
 workflows:
   build_now:
